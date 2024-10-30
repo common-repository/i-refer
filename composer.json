@@ -1,0 +1,50 @@
+{
+	"name": "irefer/i-refer-vendor-plugin",
+	"description": "I-Refer Vendor Plugin",
+	"license": "LGPLv2.1",
+	"type": "wordpress-plugin",
+	"authors": [
+		{
+			"name": "i-Refer",
+			"email": "wcd@i-refer.global",
+			"homepage": "https://i-refer.app"
+		}
+	],
+	"homepage": "https://i-refer.app",
+	"require": {
+		"php": ">=7.4",
+		"composer/installers": "1.12.0",
+		"inpsyde/assets": "2.8.3",
+		"inpsyde/wp-context": "1.3.1",
+		"micropackage/requirements": "1.2.2",
+		"wpbp/cronplus": "1.0.6",
+		"wpbp/i18n-notice": "dev-main"
+	},
+	"autoload": {
+		"psr-4": {
+			"I_Refer\\Ajax\\": "ajax/",
+			"I_Refer\\Backend\\": "backend/",
+			"I_Refer\\Engine\\": "engine/",
+			"I_Refer\\Frontend\\": "frontend/",
+			"I_Refer\\Integrations\\": "integrations/",
+			"I_Refer\\Internals\\": "internals/",
+			"I_Refer\\Rest\\": "rest/"
+		}
+	},
+	"config": {
+		"optimize-autoloader": true,
+		"platform": {
+			"php": "7.4"
+		},
+		"allow-plugins": {
+			"composer/installers": true
+		}
+	},
+	"minimum-stability": "dev",
+	"prefer-stable": true,
+	"extra": {
+		"installer-paths": {
+			"vendor/{$name}/": []
+		}
+	}
+}
